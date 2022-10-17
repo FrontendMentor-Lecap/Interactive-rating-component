@@ -1,0 +1,95 @@
+* {padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;}
+
+    :root {
+        --orange: hsl(25, 97%, 53%);
+        --lgrey: hsl(217, 12%, 63%);
+        --grey: hsl(216, 12%, 54%);
+        --dblue: hsl(213, 19%, 18%);
+        --vdblue: hsl(216, 12%, 8%);
+      }
+
+body {
+    background: var(--vdblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--lgrey);
+    position: relative;
+}
+
+.component {
+    background: var(--dblue);
+    width: 350px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.star {
+    height: 40px;
+    width: 40px;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+h2 {
+    color: white
+}
+
+.ratings ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+label {
+    width: 40px;
+    height: 40px;
+    background-color: var(--grey);
+    color: var(--lgrey);
+    border-radius: 50%;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+
+
+input[type="radio"] {
+    opacity: 0;
+    position:absolute;
+    cursor: pointer;
+}
+
+label:hover {
+    background-color: var(--vdblue);
+}
+
+input[type="radio"]:checked+label {
+    background-color: var(--orange)
+}
+
+.answer {
+    display: none;
+}
+
+.button {
+    width: 80%;
+    align-self: center;
+}
+
+footer {
+position: absolute;
+bottom: 1%;
+left: 0;
+right: 0;
+}
