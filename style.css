@@ -10,6 +10,7 @@
         --grey: hsl(216, 12%, 54%);
         --dblue: hsl(213, 19%, 18%);
         --vdblue: hsl(216, 12%, 8%);
+        --cbackground: hsla(216, 12%, 54% , 10%);    
       }
 
 body {
@@ -24,15 +25,20 @@ body {
 
 .component {
     background: var(--dblue);
-    width: 350px;
+    width: 400px;
     padding: 25px;
     border-radius: 20px;
+}
+
+.question {
+    display: grid;
+    
 }
 
 .star {
     height: 40px;
     width: 40px;
-    background-color: var(--grey);
+    background-color: var(--cbackground);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,11 +46,20 @@ body {
 }
 
 h2 {
-    color: white
+    color: white;
+    font-size: 1.5rem;
+    padding: 2rem 0 0 0;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 1em 0;
 }
 
 .ratings ul {
     display: flex;
+    margin: 0.8rem 0;
+    width: 100%;
     list-style: none;
     justify-content: space-around;
 }
@@ -52,7 +67,7 @@ h2 {
 label {
     width: 40px;
     height: 40px;
-    background-color: var(--grey);
+    background-color: var(--cbackground);
     color: var(--lgrey);
     border-radius: 50%;
 text-align: center;
@@ -71,20 +86,50 @@ input[type="radio"] {
 }
 
 label:hover {
-    background-color: var(--vdblue);
+    background-color: var(--orange);
 }
 
 input[type="radio"]:checked+label {
-    background-color: var(--orange)
+    background-color: var(--grey)
 }
 
 .answer {
     display: none;
+    text-align: center;
 }
 
-.button {
-    width: 80%;
-    align-self: center;
+.answer img {
+    justify-self: center;
+}
+
+.answer .rating {
+    background-color: var(--cbackground);
+    width: 50%;
+margin: 2rem 0 0 0;
+    justify-self: center;
+    color: var(--orange);
+    border-radius: 20px;
+}
+
+
+
+button {
+    width: 90%;
+    justify-self: center;
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+    background-color: var(--orange);
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    letter-spacing: 3px;
+    margin: 10px 0 0 0 ;
+}
+
+button:hover {
+    color: var(--orange);
+    background-color: white;
+    cursor: pointer;
 }
 
 footer {
