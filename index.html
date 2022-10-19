@@ -73,13 +73,15 @@
             </li>
           </ul>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="sendRating()">Submit</button>
       </div>
 
       <div class="answer">
         <img src="./images/illustration-thank-you.svg" alt="Thank You Icon" />
 
-        <p class="rating">You selected <span class="mark">1</span> out of 5</p>
+        <p class="rating">
+          You selected <span class="mark" id="show-result"></span> out of 5
+        </p>
 
         <div class="text">
           <h2>Thank you!</h2>
@@ -99,5 +101,18 @@
         >. Coded by <a href="#">Luis Bernal</a>.
       </div>
     </footer>
+
+    <script>
+      function sendRating() {
+        let radioBtns = document.querySelectorAll("input[name='calification']");
+        let result = document.getElementById('show-result');
+        let selected = document.querySelector(
+          "input[name='calification']:checked"
+        ).id;
+        result.textContent = selected;
+        document.querySelector('.question').style.display = 'none';
+        document.querySelector('.answer').style.display = 'grid';
+      }
+    </script>
   </body>
 </html>
